@@ -1,0 +1,11 @@
+<div class="caption">Posts by <%= @user.email %></div>
+<div class="buttons">
+    <b><%= link_to "New Post", new_post_path %></b>
+</div>
+<% @posts.each do |post| %>
+  <div class="post_wrapper">
+    <h2 class="title"><%= link_to post.title, post %></h2>
+    <p class="date"><%= post.created_at.strftime("%B %d %Y")%></p>
+    <p><b>Posted by: </b><%= post.user.email %></p>
+  </div>
+<% end %>

@@ -1,0 +1,242 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	padding-left: 10px;
+	padding-right: 10px;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	height: 100%;
+	background: #fff;
+}
+
+div {
+	display: block;
+}
+
+button {
+	cursor: pointer;
+}
+
+#header {
+	height: 55px;
+	background: #f3f1e3;
+	position: relative;
+	width: 100%;
+	border-bottom: 2px solid red;
+	margin-bottom: 23px;
+}
+
+a {
+	color: red;
+	text-decoration: none;
+}
+
+.refs {
+	position: absolute;
+	top: 20px;
+	right: 10px;
+	width: 130px;
+}
+
+.refs ul {
+	list-style: none;
+}
+
+.refs li {
+	padding-bottom: 8px;
+}
+
+li {
+	display: list-item;
+}
+
+#signed_in {
+	position: absolute;
+	top: 20px;
+	right: 300px;
+	width: 210px;
+}
+
+#log_out {
+	position: absolute;
+	top: 20px;
+	right: 200px;
+	width: 100px;
+}
+
+.caption {
+	text-align: center;
+	width: 100%;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.buttons {
+    margin: 20px;
+	width: 100px;
+	background-color: #707070;
+	border: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	border-radius: 3px;
+}
+
+.buttons a {
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.post_wrapper {
+    width: 90%;
+    border: 1px solid gray;
+    border-radius: 4px;
+	margin: 15px;
+	background: #f3f1e3;
+	padding: 15px;
+}
+
+.post_wrapper b {
+	color: #ff3333;
+	font-weight: normal;
+}
+
+.title {
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.title a {
+	color: red;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    font-weight: bold;
+	text-decoration: underline;
+}
+
+.date {
+	color: gray;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.full_post {
+	padding: 20px;
+}
+
+.full_post i {
+	font-style: normal;
+	margin-bottom: 10px;
+}
+
+.body {
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+.title b {
+	font-weight: normal;
+	font-size: 16px;
+	margin-left: 10px;
+}
+
+.title b a {
+	font-size: 16px;
+}
+
+form {
+	padding: 20px;
+}
+
+input[type=text], input[type=password], input[type=email] {
+	heigth: 50px;
+	width: 70%;
+	margin-top: 10px;
+	margin-bottom: 15px; 
+	border: 1px solid gray;
+	border-radius: 3px;
+	padding: 10px;
+	font-size: 14px;
+}
+
+input[type=text]:focus, textarea:focus {
+	background-color: #f3f1e3;
+}
+
+textarea {
+    padding: 10px;
+    font-size: 14px;
+    width: 70%;
+	border: 1px solid gray;
+	border-radius: 3px;
+	margin-top: 10px;	
+}
+
+label {
+	font-size: 14px;
+	color: red;
+	margin-bottom: 10px;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    margin: 20px;
+	width: 150px;
+	background-color: #707070;
+	border: none;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 3px;
+	font-size: 16px;
+	color: white;
+	text-align: center;
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.title_form {
+	margin-left: 20px;
+}
+
+.msg {
+	margin: 15px;
+}
+
+table {
+    margin-left: 10px;
+    width: 95%;
+    border-collapse: collapse;	
+}
+
+th, td {
+	text-align: left;
+	height: 30px;
+	padding: 5px;
+	border-bottom: 1px solid red;
+}
+
+#users {
+	position: absolute;
+	top: 20px;
+	left: 120px;
+	width: 100px;
+}
+
+.my_posts {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	width: 100px;	
+}

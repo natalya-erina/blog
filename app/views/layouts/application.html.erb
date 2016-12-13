@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div id="main_content">
+      <div id="header">
+        <% if user_signed_in? && current_user.is_admin %>
+          <div id="users"><%= link_to 'All users', users_path %></div>
+        <% end %>
+
+          <div class="refs">
+            <ul>
+              <li><%= link_to 'Sign up', new_user_registration_path %> / 
+              <%= link_to 'Sign in', new_user_session_path %></li>
+            </ul>
+          </div>
+        <% if user_signed_in? %>
+          <div class="my_posts"><%= link_to 'My Posts', user_posts_path(current_user) %></div>
+          <div id="signed_in"> Signed in as <%= current_user.email %></div>
+          <div id="log_out"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></div>
+        <% end %>
+      </div>  
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert") %> 
+      <% end %>
+      <p class="notice"><%= notice %></p>
+      <%= yield %>
+    </div>
+  </body>
+</html>

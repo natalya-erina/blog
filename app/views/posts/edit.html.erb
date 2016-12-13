@@ -1,0 +1,6 @@
+<h2 class="title_form">Edit Post</h2>
+<% if current_user == @post.user %>
+	<%= render 'form' %>
+<% else %>
+    <p class="msg">You can't watch this page</p>
+<% end %>
