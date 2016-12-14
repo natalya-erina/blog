@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       else
         @user.is_admin = true
         @user.save
-        format.html { redirect_to users_path, notice: 'You just made ' + @user.email + ' admin.' }
+        format.html { redirect_to users_path, notice: 'User ' + @user.email + ' was successfully given admin rights.' }
       end
     end
   end
@@ -29,9 +29,9 @@ class UsersController < ApplicationController
       if @user.is_admin
         @user.is_admin = false
         @user.save
-        format.html { redirect_to users_path, notice: 'User ' + @user.email + ' is not admin anymore.' }
+        format.html { redirect_to users_path, notice: 'Admin rights were successfully removed from ' + @user.email }
       else
-        format.html { redirect_to users_path, notice: 'User ' + @user.email + ' already doesnt have admin rights.'}
+        format.html { redirect_to users_path, notice: 'User ' + @user.email + ' already doesn\'t have admin rights.'}
       end
     end
   end

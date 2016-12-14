@@ -5,7 +5,6 @@
     	<tr>
     	  <th>Email</th>
     	  <th></th>
-    	  <th></th>
         <th></th>
     	</tr>
     </thead>
@@ -15,8 +14,11 @@
           <tr>
             <td><%= user.email %></td>
             <td><%= link_to 'Watch blog', user_posts_path(user) %></td>
-            <td><%= link_to 'Make admin', user_admin_path(user) %></td>
-            <td><%= link_to 'Remove admin rights', user_remove_admin_path(user) %></td>
+            <% if !user.is_admin %>
+              <td><%= link_to 'Make admin', user_admin_path(user) %></td>
+            <% else %>
+              <td><%= link_to 'Remove admin rights', user_remove_admin_path(user) %></td>
+            <% end %>
           </tr>
         <% end %>
       <% end %>
